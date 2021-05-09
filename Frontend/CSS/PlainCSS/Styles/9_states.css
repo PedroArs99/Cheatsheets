@@ -1,0 +1,24 @@
+/* A tag can be in different states:
+     hover when the mouse is over the element
+     empty when there's nothing between tags
+     active when you click on the element
+     visited when you've visited a link i.e
+     ...
+*/
+
+a{
+    text-decoration: none;
+    color: cyan
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color:green;
+}
+
+a:visited{
+    color: lightsalmon;
+}

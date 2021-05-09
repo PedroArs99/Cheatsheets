@@ -1,0 +1,14 @@
+/* There are multiple options to choose Colors
+    * Hex Colors: Best Practices
+    * Simple colors: red, blue, ...
+    * HTML5 Colors: Coral, gold,...
+    * RGB Colors: rgb(255,255,255) 
+*/
+
+body{
+    /*Changes Background Color */
+    background-color: #000000;
+
+    /*Changes Text Color */
+    color: #ffffff;
+}

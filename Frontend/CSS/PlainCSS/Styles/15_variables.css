@@ -1,0 +1,68 @@
+/*Define Variables for the root elem */
+:root{
+    --main-bg-color: #f4f4f4;
+    --main-txt-color: #333;
+    --container-width: 90%;
+    --header-bg-color: #333;
+    --header-txt-color: #f4f4f4;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.5;
+
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header#main-header{    
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--header-bg-color);
+    color: var(--header-txt-color);
+}
+
+.container{
+    width: var(--container-width);
+    margin: 20px auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+/*Variables only available on box class */
+.box{
+    --box-bg-color: #ddd;
+    --box-main-color: #06c;
+    --box-padding: 5px 10px;
+}
+
+.box{
+    background-color: var(--box-bg-color);
+    padding: var(--box-padding);
+    border: 1px solid var(--box-main-color);
+    box-shadow: 10px 5px 5px var(--box-main-color);
+}
+
+.box h1{
+    color: var(--box-main-color);
+}
+
+.box button{
+    border: none;
+    padding: 10px;
+    background-color: var(--box-main-color);
+    border-radius: 5px;
+    color: white;
+}
+
+
+

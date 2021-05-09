@@ -1,0 +1,38 @@
+
+
+.my-form{
+    padding: 20px;
+
+}
+
+.my-form .form-group{
+    padding-bottom: 15px;
+}
+
+.my-form label{
+    display: block; /*Label & input in different lines */
+}
+
+.my-form input { /*All inputs & text areas */
+    padding: 8px;
+    width: auto;
+}
+
+.my-form textarea{
+    padding: 8px;
+    width: 13%;
+}
+
+.button{ /*Only target submit button */
+    width: 13%;
+    background-color: darkgray;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.button:hover{
+    background-color: red;
+    color: white;
+}
+

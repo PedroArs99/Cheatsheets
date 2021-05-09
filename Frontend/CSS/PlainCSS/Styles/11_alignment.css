@@ -1,0 +1,28 @@
+.block{
+    float: left; /*Move elements as left as possible */
+    width: 33.3%; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    /*After adding padding & border size can be bigger than the container. 
+    This is the solution. */
+    box-sizing: border-box; 
+    border-collapse: collapse;
+}
+
+.clr{
+    clear: both; /*Clear any float */
+}
+
+#main-block{
+    float: left;
+    width: 66.7%;
+}
+
+#sidebar{
+    float: right;
+    width: 33.3%;
+    background-color: darkgray;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+}

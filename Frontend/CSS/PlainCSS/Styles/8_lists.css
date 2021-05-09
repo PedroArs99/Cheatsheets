@@ -1,0 +1,26 @@
+ul{
+    
+    /* Changes the bullet for a square */
+    list-style: square;
+
+    /* Changes the bullet for nothing */
+    list-style: none;
+
+    /*list-style-image: url("../Resources/icon.png"); They're used with the default size of the image, please resize! */
+}
+
+ul li:first-child{
+    background: red;
+}
+
+ul li:last-child{
+    background: blue;
+}
+
+ul li:nth-child(3){
+    background: greenyellow;
+}
+
+ul li:nth-child(even){
+    background: yellow;
+}

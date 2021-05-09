@@ -1,0 +1,13 @@
+/*Same for border & padding */
+p{
+    /*Longer Way */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    /* Shorted way */
+    margin: 5px 5px 5px 5px; /*top right bottom left */
+    margin: 5px 5px; /* top-bottom righ-left if they're the same */
+
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables</title>
+    <link rel="stylesheet" href="Styles/15_variables.css">
+</head>
+<body>
+    <header id="main-header">
+        <h1>Css Variables</h1>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="box">
+                <h1>Hello World</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus recusandae nesciunt iusto blanditiis, architecto culpa fugit! Ex sed cumque soluta commodi aperiam quibusdam reiciendis magnam sapiente, delectus tempora nisi ullam?</p>
+                <button onclick="changeColor()">Click Me!</button>
+            </div>
+            <div class="box">
+                <h1>Hello World</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus recusandae nesciunt iusto blanditiis, architecto
+                    culpa fugit! Ex sed cumque soluta commodi aperiam quibusdam reiciendis magnam sapiente, delectus tempora nisi
+                    ullam?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const box = document.querySelector('.box');
+        const boxStyles = getComputedStyle(box);
+        var boxMainColor = boxStyles.getPropertyValue('--box-main-color');
+        
+        function changeColor() {
+            boxMainColor = '#000';
+            box.style.setProperty('--box-main-color',boxMainColor);  
+        }
+        
+    </script>
+</body>
+</html>

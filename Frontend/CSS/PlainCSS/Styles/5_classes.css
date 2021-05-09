@@ -1,0 +1,26 @@
+/*We use . to target a class */
+
+.container{
+    width: 80%; /* percentages are more responsive than pixelx */
+    margin: auto;
+}
+
+.box-1{
+    background-color: lightgrey;
+    color: black; /* Text Color */
+
+}
+
+.categories{
+    border: 1px lightgray solid;
+    border-radius: 15px;
+
+    padding: 10px;
+}
+
+.categories h2{
+    text-align: center;
+}
+
+
+

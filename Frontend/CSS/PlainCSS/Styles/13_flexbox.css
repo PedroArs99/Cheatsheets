@@ -1,0 +1,67 @@
+@media(min-width: 768px){
+   .container{
+        display: flex;
+        
+        align-items: flex-start; /*If one component is smaller than the other ones, those start at the top of the smaller one. */
+        align-items: flex-end;  /*If one component is taller than the other ones, those start at the bottom of the higher one. */
+        align-items: center;
+        align-items: stretch; /*Default. All component are equal higher, adds padding if necessary */
+
+        /*Elements are displayed on a column, or in a row */
+        flex-direction: column;
+        flex-direction: row;
+    }
+
+    .container-2{
+        display: flex;
+
+        justify-content: flex-start; /*Default */
+        justify-content: flex-end; /* Push content to the rigth */
+        justify-content: center;
+        justify-content: space-between; /* Adds margin between elements such they take the whole space */
+        justify-content: space-around; /* Same as space-between but it also adds margin to the sides */ 
+    } 
+
+}
+
+.container-3{
+    display: flex;
+    
+    flex-wrap: wrap; /* At a certain point, some columns are displayed in different rows */
+}
+
+.container div, .container-2 div, .container-3 div{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+/*
+ * If all the components have the same number they're equal, if the number goes bigger, the component takes more space.
+ */
+.box-1{
+    flex: 2; /* Horizontal */
+    order: 2; /* Change order */
+}
+
+.box-2{
+    flex: 1;
+    order: 1;
+}
+
+.box-3{
+    flex: 1;
+    order: 3;
+}
+
+
+
+.container-2-box{
+   /* width: 27%; */
+   flex-basis: 27%; /* Same, but Flexy way */
+}
+
+.container-3-box{
+    flex-basis: 15%;
+}
+
+
+

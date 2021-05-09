@@ -1,0 +1,37 @@
+p{
+    /*Fonts itself.
+        It will load the first one, if it doesn't work the second one, etc 
+    */
+
+    /* There are two types of fonts:
+    *   Web safe fonts: ready to use out of the box.
+    *   Imported fonts: you have to install them.
+    */
+    font-family: Arial, Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    /*font-weight: bold;*/
+    font-weight: normal; /* Can be a number */
+
+    /*Shorted Way */
+    font: normal Arial, Helvetica,sans-serif, 16px;
+    
+
+    /* Separations Between Lines */    
+    /* em is a responsive unit */
+    line-height: 1.6em;
+
+    text-decoration: underline; 
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    letter-spacing: 0.2em;
+
+    word-spacing: 1em;
+
+    
+
+}

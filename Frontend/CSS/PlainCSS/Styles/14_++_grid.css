@@ -1,0 +1,58 @@
+.wrapper{
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+
+    grid-auto-rows: minmax(100px,auto);
+
+    grid-gap: 1em;
+
+    justify-items: start;
+    justify-items: center;
+    justify-items: end;
+    justify-items: stretch; /*Default */
+
+    align-items: start; /* Same but horizontal */
+    align-items: center;
+    align-items: end;
+    align-items: stretch; /* Default */
+}
+
+.wrapper > div{
+    background: #eee;
+    padding: 1em;
+}
+
+.wrapper > div:nth-child(odd){
+    background: #aaa;
+}
+
+.box1{
+     align-self: start; /* Align only one */
+
+    grid-column: 1/3; /* Item takes column 1 to 3 [1,3) */
+    grid-row: 1/3; /* Same but for rows */
+}
+
+.box2{
+     align-self: end; 
+    grid-column: 3; /* Stays where it is */
+    grid-row: 1/3; /* Take rows 1 to 3 */
+}
+
+.box3{
+     justify-self: end; 
+    grid-column: 1/4;
+    grid-row: 3;
+}
+
+.box4{
+    grid-column: 1;
+    grid-row: 2/4; /* Overlapped Element */
+
+    border: 1px solid #333;
+}
+
+.box5{
+
+}

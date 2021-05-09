@@ -1,0 +1,21 @@
+ *{
+    /*Everything */
+ }
+ 
+ #id{
+     /*Only for one element in each page.
+        Should be Unique */
+ }
+
+ .class{
+     /* Classes: create a concrete style, can be used anywhere.
+        Reusable */
+ }
+
+ .class h1{
+    /* All h1 tags inside class */
+ }
+
+ h1{
+    /* overrides html default tags. Can redefine h1, strong, div, whatever */
+ }
