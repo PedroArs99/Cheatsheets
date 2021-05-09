@@ -1,0 +1,18 @@
+Install 
+
+	1. Node is required, such as Angular needs NPM
+
+	2. Sudo npm install --g @angular/cli 
+
+Run dev Server 
+	1. ng serve 
+	
+New Component 
+	1. ng generate component {folder}
+		* eg -> ng generate component components/Todos 
+
+New Service 
+	1. ng generate service {folder}
+
+Deploy 
+	1. ng build
