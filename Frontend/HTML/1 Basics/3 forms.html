@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Cheat Sheet</title>
+</head>
+<body>
+    <!--Forms
+        action: the script where we send data
+        method: sets if the request is POST or GET
+        type: sets the type of input
+        name: the name of the 'variable' that goes in the form, we can use that name to 
+            read de data serverside.
+        placeholder: default text.
+
+        readonly: We cannot edit the field
+        required: User cannot send the form if that text isnt written
+    -->
+
+    <form action="login.php" method="POST">
+        <div>
+            <label>User: </label>
+            <input type="text" name="user" placeholder="User" readonly> 
+        </div>
+        <div>
+            <label>Password: </label>
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <div>
+            <label >Email:</label>
+            <input type="email" name="email" placeholder="Email">
+        </div>
+        <div>
+            <label>Description:</label>
+            <textarea name="description" cols="5" rows="1" placeholder="Description"></textarea>
+        </div>
+        <div>
+            <label>Gender:</label>
+            <select name="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+        </div>
+        <div>
+            <label>Age:</label>
+            <input type="number" name="age" placeholder="Age">
+        </div>
+        <div>
+            <label>Birthday:</label>
+            <input type="date" name="Birthday" placeholder="dd/mm/aaaa">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+        
+    </form>
+</body>
+</html>
