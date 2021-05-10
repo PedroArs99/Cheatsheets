@@ -103,10 +103,9 @@ dist
 # TernJS port file
 .tern-port
 
-# MacOs
-.DS_Store
-
 # Icons
 Icon
 
 
+# MacOs
+.DS_Store

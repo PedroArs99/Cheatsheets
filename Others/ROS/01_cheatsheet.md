@@ -34,40 +34,55 @@ Important aspects from ROS:
 * Master have to be started before all the other processes
 
 ## Commands
-* rosnode
-* rostopic
-* rosservice
 * rosparam
-* rosmsg
-* rossrv
 * rqt_graph
 * (roslaunch)
 
 ```bash
+roscore &
 // Always have to be active
 // "OS", without it anything can be launched
 // Often its launched on background
-roscore &
 ```
 
 ```sh
+rosrun <package> <node>
 // Launch Nodes
 // Nodes have to be compiled with roscore active
-rosrun <package> <node>
 ```
 
 ```sh
-// Offer information about nodes
-rosnode list
+rosnode list // Offer information about nodes
 rosnode ping <name>
 rosnode info <name>
 rosnode kill <name>
 ```
 
 ```sh
-// Offer information about topics, publications and subscriptions
-rostopic list
+rostopic list // Offer information about topics, publications and subscriptions
 rostopic info <topic>
 rostopic echo <topic> // Show messages published on a topic
 rostopic pub <topic> <data>
 ```
+
+```sh
+rosservice list // Offer information about offered and used services
+rosservice info <service>
+rosservice call <name> <request> // Useful to test
+```
+
+```sh
+rossrv
+// Is used to get a view of the available Service Data types, that have to be included to use ::Request and ::Response
+
+rossrv list // List of Services datatypes
+rossrv show <name>
+```
+
+```sh
+rosmg // Analog to rossrv with message Datatypes
+rosmsg show <name>
+```
+
+
+
