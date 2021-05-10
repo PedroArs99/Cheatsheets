@@ -109,3 +109,6 @@ Icon
 
 # MacOs
 .DS_Store
+
+# IntelliJ
+.idea/
