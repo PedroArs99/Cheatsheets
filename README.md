@@ -1,7 +1,7 @@
 # Cheatsheets
 
 ## Languages
-1. [C++](/Language/C%2B%2B)
+1. [C++](/Language/C%2B%2B/Cheatsheet.md)
 2. [Python](/Language/Python)
 
 ## Databases
