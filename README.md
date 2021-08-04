@@ -22,7 +22,7 @@
 
 
 ## DevOps
-1. [Git](/Devops/git/Cheatsheet.md)
+1. [Git](/Devops/Git/Cheatsheet.md)
 2. [Docker](/Devops/Docker)
 
 ### TODOS
