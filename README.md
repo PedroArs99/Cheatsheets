@@ -28,8 +28,4 @@
 ### TODOS
 * Update MongoDb to Markdown syntax
 * Update Python to Markdown syntax
-* Remove C/AVR
-* Remove Assembler/AVR
 * Update TS to Markdown + complete
-* Remove ROS
-* Remove Figma
