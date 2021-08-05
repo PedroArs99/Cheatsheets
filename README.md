@@ -2,10 +2,10 @@
 
 ## Languages
 1. [C++](/Language/C%2B%2B/Cheatsheet.md)
-2. [Python](/Language/Python)
+2. [Python](/Language/Python/Cheatsheet.md)
 
 ## Databases
-1. [MongoDb](/Database/MongoDb/cheatsheet.html)
+1. [MongoDb](/Database/MongoDb/Cheatsheet.md)
 
 ## Backend
 1.  [PHP](/Backend/PHP)
