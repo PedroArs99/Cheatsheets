@@ -26,6 +26,4 @@
 2. [Docker](/Devops/Docker)
 
 ### TODOS
-* Update MongoDb to Markdown syntax
-* Update Python to Markdown syntax
 * Update TS to Markdown + complete
