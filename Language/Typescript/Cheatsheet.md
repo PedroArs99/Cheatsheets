@@ -1,22 +1,5 @@
 # Typescript
 
-## Downleveling (Move to the end of the page)
-For example:
-```typescript
-`Hello ${person}, today is ${date.toDateString()}!`;
-```
-
-Gets compiled to:
-```typescript
-"Hello " + person + ", today is " + date.toDateString() + "!";
-```
-
-Template strings are a feature introduced in ES6. This is called downleveling and is useful to make code compatible with older browsers.
-
-By default the compiler downlevels to ES3.
-Using the `--target` the compiler translates the code to a explicit version. 
-
-
 ## Basic Types
 ### Primitives
 ```typescript	
@@ -285,3 +268,198 @@ type point = [number, number, number?];
 ```typescript
 type queue = [head, ...elements, tail];
 ```
+
+
+## Classes
+```typescript
+class Point {
+    x: number;
+    y: number;
+}
+```
+
+With default values:
+```typescript
+class Point {
+  x = 0;
+  y = 0;
+}
+```
+
+`strictPropertzInitialization` in `tsconfig.json` forces to set a default value for every property or initialize them in the constructor.
+
+Fields marked with `readonly` are not allowed to be modified outside the constructor.
+
+### Constructor
+```typescript
+class Point {
+    x: number;
+    y: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
+}
+```
+With Parameter syntax:
+```typescript
+class Point {
+  constructor(
+    public x: number,
+    public y: number
+  ){
+    // No Body necessary
+  }
+}
+```
+
+### Inheritance
+```typescript
+class Point3D extends Point {
+    z: number;
+
+    constructor(x: number, y: number, z: number) {
+        super(x, y);
+        this.z = z;
+    }
+}
+```
+
+### Methods
+```typescript
+class Point {
+    x: number;
+    y: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
+
+    distanceTo(other: Point): number {
+        return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
+    }
+}
+```
+
+### Getters / Setters
+```typescript
+class Point {
+  _x: number;
+  _y: number;
+
+  get x(): number {
+    return this._x;
+  }
+
+  set x(value: number) {
+    this._x = value;
+  }
+}
+```
+*Note: If `get`exists but there's no `set`attribute is automatically `readonly`*
+
+### Interfaces
+```typescript
+interface List {
+    add(value: number): void;
+    remove(value: number): void;
+}
+
+class ArrayList implements List {
+    private _data: number[];
+
+    add(value: number): void {
+        this._data.push(value);
+    }
+
+    remove(value: number): void {
+        this._data.splice(this._data.indexOf(value), 1);
+    }
+}
+```
+
+### Visibility
+Visibility is only checked in compile time. On runtime, all the visibiliy is ignored since everything is being compiled to vanilla JS where there's no visibilities.
+
+```typescript
+class Point {
+  // Available in the global scope
+  public x: number;
+  // Available only for this and derived classes
+  protected y: number;
+  // Not available anywhere
+  private z: number;
+}
+```
+*Default is `public`*
+
+#### Cross instance Private access
+```typescript
+class A {
+  private _x: number;
+
+  public copy(other: A){
+    this._x = other._x;
+  }
+}
+```
+*Allowed even though `x` is private*
+
+### Static Members
+```typescript
+class Point {
+  static origin: Point = new Point(0, 0);
+}
+```
+*There's no static classes like in Java*
+
+### Abstract Members
+```typescript
+abstract class Point {
+  x: number;
+  y: number;
+
+  // Implementation depends on the coordinates system
+  abstract distanceTo(other: Point): number;
+}
+```
+*Abstract classes can't be instantiated*
+
+## Downleveling
+For example:
+```typescript
+`Hello ${person}, today is ${date.toDateString()}!`;
+```
+
+Gets compiled to:
+```typescript
+"Hello " + person + ", today is " + date.toDateString() + "!";
+```
+
+Template strings are a feature introduced in ES6. This is called downleveling and is useful to make code compatible with older browsers.
+
+By default the compiler downlevels to ES3.
+Using the `--target` the compiler translates the code to a explicit version. 
+
+## Utility Types
+* `Partial<T>`: Constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type.
+* `Required<T>`: The opposite of `Partial<T>`. Constructs a type with all properties of Type set to required.
+* `Readonly<T>`: Constructs a type with all properties of Type set to readonly.
+* `Record<T,K>`: Constructs an object type whose property keys are Keys and whose property values are Type. This utility can be used to map the properties of a type to another type.
+```typescript
+interface CatInfo {
+  age: number;
+  breed: string;
+}
+ 
+type CatName = "miffy" | "boris" | "mordred";
+ 
+const cats: Record<CatName, CatInfo> = {
+  miffy: { age: 10, breed: "Persian" },
+  boris: { age: 5, breed: "Maine Coon" },
+  mordred: { age: 16, breed: "British Shorthair" },
+};
+```
+* 
