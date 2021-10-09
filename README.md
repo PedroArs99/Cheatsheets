@@ -3,13 +3,14 @@
 ## Languages
 1. [C++](/Language/C%2B%2B/Cheatsheet.md)
 2. [Python](/Language/Python/Cheatsheet.md)
+3. [Typescript](/Language/Typescript/Cheatsheet.md)
 
 ## Databases
 1. [MongoDb](/Database/MongoDb/Cheatsheet.md)
 
 ## Backend
 1.  [PHP](/Backend/PHP)
-2.  [NodeJs](/Backend/Node)
+2.  [Node](/Backend/Node)
     1. [Express](/Backend/Express)
 
 ## Frontend
@@ -24,6 +25,4 @@
 ## DevOps
 1. [Git](/Devops/Git/Cheatsheet.md)
 2. [Docker](/Devops/Docker)
-
-### TODOS
-* Update TS to Markdown + complete
+3. [Kubernetes](/Devops/K8s)
