@@ -47,7 +47,6 @@ import { createEventDispatcher } from "svelte";
         right: 20px;
         cursor: pointer;
 
-        background: none;
-        border: none;
+        color: #000;
     }
 </style>
