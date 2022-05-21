@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { Feedback } from "../../models/Feedback";
-    import Card from "../layout/Card.svelte";
+    import type { Feedback } from "../../../models/Feedback";
+    import Card from "../../layout/Card.svelte";
 
     export let feedbackItems: Feedback[];
 

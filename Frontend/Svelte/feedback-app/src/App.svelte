@@ -1,11 +1,10 @@
 <script lang="ts">
-	import FeedbackList from "./components/feedback/FeedbackList.svelte";
-	import { feedbackItems } from "./models/Feedback";
+	import FeedbackList from "./features/feedback/components/FeedbackList.svelte";
 </script>
 
 <!-- HTML-->
 <main class="container">
-	<FeedbackList {feedbackItems} />
+	<FeedbackList />
 </main>
 
 <!-- CSS -->

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Card from "../layout/Card.svelte";
-    import RatingSelect from "../layout/RatingSelect.svelte";
+    import Card from "../../layout/Card.svelte";
+    import RatingSelect from "../../layout/RatingSelect.svelte";
     import { v4 as uuidv4 } from "uuid";
     import { createEventDispatcher } from "svelte";
     const dispatch = createEventDispatcher();

@@ -1,27 +1,27 @@
 <script lang="ts">
-    import type { Feedback } from "../../models/Feedback";
     import { fade, scale } from "svelte/transition";
     import FeedbackForm from "./FeedbackForm.svelte";
     import FeedbackItem from "./FeedbackItem.svelte";
     import FeedbackStats from "./FeedbackStats.svelte";
-
-    export let feedbackItems: Feedback[] = [];
+    import { FeedbackStore } from "../store/feedback.store";
 
     const handleAdd = ({ detail }) => {
-        feedbackItems = [...feedbackItems, detail];
+        FeedbackStore.update((state) => [...state, detail]);
     };
 
     const handleDelete = ({ detail }) => {
-        feedbackItems = feedbackItems.filter((item) => item.id !== detail);
+        FeedbackStore.update((state) =>
+            state.filter((item) => item.id !== detail)
+        );
     };
 </script>
 
 <!-- HTML Section -->
 <FeedbackForm on:add-feedback-item={handleAdd} />
 
-<FeedbackStats {feedbackItems} />
+<FeedbackStats feedbackItems={$FeedbackStore} />
 
-{#each feedbackItems as fb}
+{#each $FeedbackStore as fb}
     <div in:scale out:fade={{ duration: 500 }}>
         <FeedbackItem feedback={fb} on:delete-feedback-item={handleDelete} />
     </div>

@@ -1,8 +1,8 @@
 <script lang="ts">
 import { createEventDispatcher } from "svelte";
 
-    import type { Feedback } from "../../models/Feedback";
-    import Card from "../layout/Card.svelte";
+    import type { Feedback } from "../../../models/Feedback";
+    import Card from "../../layout/Card.svelte";
     
     export let feedback: Feedback = undefined;
 
