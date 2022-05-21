@@ -32,7 +32,7 @@ import { createEventDispatcher } from "svelte";
         left: -10px;
         width: 50px;
         height: 50px;
-        background-color: #f00;
+        background-color: #0099ff;
         color: #fff;
         border: 1px #eee solid;
         border-radius: 50%;
