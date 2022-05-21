@@ -1,32 +1,34 @@
+import {v4 as uuidv4} from 'uuid';
+
 export interface Feedback {
-    id: number;
+    id: string;
     rating: number;
     text: string;
 }
 
-export const feedbackItems: Feedback[] = [
+export let feedbackItems: Feedback[] = [
     {
-        id: 1,
+        id: uuidv4(),
         rating: 5,
         text: 'This is a great app!',
     },
     {
-        id: 2,
+        id: uuidv4(),
         rating: 4,
         text: 'This is a good app!',
     },
     {
-        id: 3,
+        id: uuidv4(),
         rating: 3,
         text: 'This is a ok app!',
     },
     {
-        id: 4,
+        id: uuidv4(),
         rating: 2,
         text: 'This is a bad app!',
     },
     {
-        id: 5,
+        id: uuidv4(),
         rating: 1,
         text: 'This is an awful app!',
     }
