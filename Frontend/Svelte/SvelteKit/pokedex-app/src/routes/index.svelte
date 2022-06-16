@@ -1,5 +1,6 @@
 <script>
 	import { fetchPokemon, pokemonStore } from '../stores/pokestore';
+	import PokemonCard from '../components/pokemon/pokemonCard.svelte';
 
 	// Init Store Data
 	fetchPokemon();
@@ -10,15 +11,22 @@
 	<title>Svelte Kit Pokedex</title>
 </svelte:head>
 
-<h1>SvelteKit Pokedex</h1>
-
-{#each $pokemonStore as pokemon }
-	<h2>{pokemon.name}</h2>
-{/each}
-
+<div class="level">
+	<h1 class="level-item is-size-2 my-3">SvelteKit Pokedex</h1>
+</div>
+<div class="pokemon-list">
+	{#each $pokemonStore as pokemon}
+		<PokemonCard {pokemon}/>
+	{/each}
+</div>
+ 
 <!-- CSS Section-->
 <style>
-	h1 {
-		color: red;
+	.pokemon-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		gap: 0.75em;
 	}
 </style>
