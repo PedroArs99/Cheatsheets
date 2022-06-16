@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+</script>
+
+<!-- HTML Section -->
+<svelte:head>
+    <title>Svelte Kit Pokedex</title>
+</svelte:head>
+
+<h1>SvelteKit Pokedex</h1>
+
+<!-- CSS Section-->
+<style>
+	h1 {
+		color: red;
+	}
+</style>
