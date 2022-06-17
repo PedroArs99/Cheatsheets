@@ -1,10 +1,11 @@
 <script lang="ts">
 	import type { Pokemon } from 'src/models/pokemon/pokemon';
+	import { fade } from 'svelte/transition';
 
 	export let pokemon: Pokemon;
 </script>
 
-<div class="card">
+<div class="card" transition:fade>
 	<div class="card-image has-text-centered">
 		<figure class="image is-128x128 is-inline-block">
 			<!-- svelte-ignore a11y-img-redundant-alt -->
