@@ -1,4 +1,4 @@
-import type { Pokemon } from "src/models/pokemon";
+import type { Pokemon } from "src/models/pokemon/pokemon";
 import type { PokemonListResult } from "src/models/pokemonListResult";
 import { writable } from "svelte/store";
 

@@ -2,7 +2,7 @@
 	import { fetchPokemon, pokemonStore } from '../stores/pokestore';
 	import PokemonCard from '../components/pokemon/pokemonCard.svelte';
 	import { onMount } from 'svelte';
-	import type { Pokemon } from 'src/models/pokemon';
+	import type { Pokemon } from 'src/models/pokemon/pokemon';
 
 	onMount(() => {
 		fetchPokemon();
