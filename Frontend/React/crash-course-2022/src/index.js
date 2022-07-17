@@ -16,25 +16,23 @@ const cleanCode = {
   img: 'https://images-na.ssl-images-amazon.com/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg'
 }
 
+const books = [hackingK8s, cleanCode]
+
 function BookList() {
   return (
     <section className="bookList">
-      <Book book={hackingK8s}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatibus mollitia ducimus accusantium consequuntur voluptatem minima dolores tenetur rerum ea vero alias provident, reprehenderit cum. Est consequuntur ipsum suscipit? Possimus.</p>
-      </Book>
-      <Book book={cleanCode}/>
+      {books.map((book, index) => <Book key={index} book={book} />)}
     </section>
   );
 }
 
-function Book({book, children}) {
+function Book({book}) {
   const {title, author, img} = book
 
   return <article className="book">
     <img src={img}/>
     <h2>{title}</h2>
     <h4>{author}</h4>
-    {children}
   </article>;
 }
 
